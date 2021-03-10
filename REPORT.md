@@ -301,7 +301,7 @@ git checkout patch2
 git pull origin main
 git rebase main
 git add hello_world.cpp
-git commit -m 'Solved conflict'
+git commit -m 'Ystronenie konflukta'
 git rebase master
 git rebase —continue
 git push origin patch2 —force
@@ -314,7 +314,7 @@ git checkout patch2
 git pull origin main
 git rebase main
 git add hello_world.cpp
-git commit -m 'Solved conflict'
+git commit -m 'Ystronenie konflukta'
 git rebase master
 git rebase —continue
 git push origin patch2 —force
