@@ -297,25 +297,27 @@ error: Не удалось слить изменения.
 git pull --rebase origin main
 
 Само исправление конфликта:
-git checkout main
-git pull origin main
 git checkout patch2
+git pull origin main
 git rebase main
-nano hello_world.cpp
 git add hello_world.cpp
-rebase --continue
+git commit -m 'Solved conflict'
+git rebase master
+git rebase —continue
+git push origin patch2 —force
 ```
 
 6. Для этого локально выполните **pull** + **rebase** (точную последовательность команд, следует узнать самостоятельно). **Исправьте конфликты**.
 ```sh
 Само исправление конфликта:
-git checkout main
-git pull origin main
 git checkout patch2
+git pull origin main
 git rebase main
-nano hello_world.cpp
 git add hello_world.cpp
-rebase --continue
+git commit -m 'Solved conflict'
+git rebase master
+git rebase —continue
+git push origin patch2 —force
 ```
 7. Сделайте *force push* в ветку `patch2`
 ```sh
