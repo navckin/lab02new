@@ -282,6 +282,7 @@ This branch has conflicts that must be resolved
 Use the web editor or the command line to resolve conflicts.
 Conflicting files
 hello_world.cpp
+Эти команды можно и не делать, бесполезыне:...
 Для того, чтобы увидеть, где именно ошибки при слиянии в терминале, можно ввести команду:
 git am --show-current-patch
 Сам конфликт:
@@ -294,15 +295,42 @@ M	hello_world.cpp
 error: Не удалось слить изменения.
 Это сообщение на терминале можно увидеть после попытки вызова команды:
 git pull --rebase origin main
+
+Само исправление конфликта:
+git checkout main
+git pull origin main
+git checkout patch2
+git rebase main
+nano hello_world.cpp
+git add hello_world.cpp
+rebase --continue
 ```
 
 6. Для этого локально выполните **pull** + **rebase** (точную последовательность команд, следует узнать самостоятельно). **Исправьте конфликты**.
 ```sh
-
+Само исправление конфликта:
+git checkout main
+git pull origin main
+git checkout patch2
+git rebase main
+nano hello_world.cpp
+git add hello_world.cpp
+rebase --continue
 ```
 7. Сделайте *force push* в ветку `patch2`
+```sh
+git push --force origin patch2
+```
 8. Убедитель, что в pull-request пропали конфликтны. 
+```sh
+Конфликтов нет
+```
 9. Вмержите pull-request `patch2 -> master`.
+```sh
+git checkout main
+git merge patch2
+git push
+```
 
 
 na
