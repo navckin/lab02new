@@ -315,9 +315,9 @@ git pull origin main
 git rebase main
 git add hello_world.cpp
 git commit -m 'Ystronenie konflukta'
-git rebase master
+git rebase main
 git rebase —continue
-git push origin patch2 —force
+(git push origin patch2 —force) --> выполнена в пункте 7.
 ```
 7. Сделайте *force push* в ветку `patch2`
 ```sh
